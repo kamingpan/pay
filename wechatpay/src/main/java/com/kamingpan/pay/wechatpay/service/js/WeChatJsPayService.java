@@ -35,7 +35,7 @@ public class WeChatJsPayService extends WeChatPayBaseService {
 
         // 组装js支付签名对象
         JsPaySignature jsPaySignature = new JsPaySignature();
-        jsPaySignature.setPrepayId(unifiedOrderResponse.getPrepayId());
+        jsPaySignature.setPrefixPrepayId(unifiedOrderResponse.getPrepayId());
         JsPaySignature.sign(jsPaySignature);
         return jsPaySignature;
     }
@@ -56,7 +56,7 @@ public class WeChatJsPayService extends WeChatPayBaseService {
         // 组装js支付签名对象
         JsPaySignature jsPaySignature = new JsPaySignature();
         jsPaySignature.setAppId(unifiedOrderResponse.getAppId());
-        jsPaySignature.setPrepayId(unifiedOrderResponse.getPrepayId());
+        jsPaySignature.setPrefixPrepayId(unifiedOrderResponse.getPrepayId());
         JsPaySignature.sign(jsPaySignature);
         return jsPaySignature;
     }

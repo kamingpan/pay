@@ -37,6 +37,15 @@ public class JsPaySignature {
     private String paySign;
 
     /**
+     * 设置带前缀的预支付id
+     *
+     * @param prepayId 预支付id
+     */
+    public void setPrefixPrepayId(String prepayId) {
+        this.prepayId = ("prepay_id=" + prepayId);
+    }
+
+    /**
      * 签名
      *
      * @param jsPaySignature js支付签名对象
